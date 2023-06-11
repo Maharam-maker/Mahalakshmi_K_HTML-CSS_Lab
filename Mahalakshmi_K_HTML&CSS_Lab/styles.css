@@ -1,0 +1,79 @@
+/* Navigation Menu Bar */
+header {
+    background-color: #333;
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Vertical Bar Graph */
+.bar-chart {
+    position: relative;
+    margin: 50px auto;
+    text-align: center;
+    width: 300px;
+}
+
+.bar {
+    background-color: #007bff;
+    width: 20px;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    animation: barAnimation 2s ease-out;
+}
+
+@keyframes barAnimation {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: calc(var(--percentage) * 2px);
+    }
+}
+
+h1 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.header-top { /* New CSS rule */
+    background-color: #ff0000; /* Replace with your desired color */
+    height: 100px;
+}

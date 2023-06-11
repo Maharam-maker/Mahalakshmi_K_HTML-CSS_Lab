@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    
+    form {
+      border: 1px solid black;
+      padding: 20px;
+      width: 400px;
+      margin: 0 auto;
+      background-color: white;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 0;
+    }
+    
+    
+    input[type="text"], input[type="password"], input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid gray;
+      transition: background-color 0.3s ease;
+    }
+    
+    input[type="text"]:focus, input[type="password"]:focus, input[type="tel"]:focus {
+      background-color: rgba(70, 130, 180, 0.35);
+    }
+    
+    input[type="submit"], input[type="reset"] {
+      padding: 10px 20px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    
+    input[type="reset"] {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+    <video id="video-background" autoplay muted loop>
+        <source src="background.mp4" type="video/mp4">
+        <!-- Include additional source elements for different video formats if needed -->
+      </video>
+    <h1>Create Gmail Account</h1>
+  <form>
+    <input type="text" name="fillName" placeholder="Full Name" required>
+    <br>
+    
+    <input type="tel" name="contactNumber" placeholder="Contact Number" required>
+    <br>
+    <input type="text" name="email" placeholder="Enter email id" required>
+    <br>
+    
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+</body>
+</html>

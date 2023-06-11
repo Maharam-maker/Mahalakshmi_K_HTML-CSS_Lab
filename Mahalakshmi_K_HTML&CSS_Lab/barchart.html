@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #graph-container {
+      width: 400px;
+      height: 400px;
+      background-color: lightgray;
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      padding: 10px;
+    }
+    .bar {
+      width: 50px;
+      background-color: rgb(122, 122, 129);
+      transition: height 2s;
+    }
+    h1 {
+      text-align: center;
+    }
+    .legend {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    .legend span {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bar Plot</h1>
+  <div id="graph-container">
+    <div class="bar" id="bar1">
+        <span>30%</span>
+    </div>
+    <div class="bar" id="bar2">
+        <span>40%</span>
+    </div>
+    <div class="bar" id="bar3">
+        <span>80%</span>
+    </div>
+   
+  </div>
+
+  <script>
+    function animateBar(barId, percentage) {
+      var graphHeight = 300;
+      var bar = document.getElementById(barId);
+      var barHeight = (percentage / 100) * graphHeight;
+      bar.style.height = barHeight + "px";
+    }
+
+    window.onload = function() {
+      animateBar("bar1", 30); // Bar 1: 30%
+      animateBar("bar2", 40); // Bar 2: 40%
+      animateBar("bar3", 80); // Bar 3: 80%
+    };
+  </script>
+</body>
+</html>
